@@ -1,5 +1,5 @@
 import React from "react";
-import "./Usuario.css";
+import "./usuario.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -11,7 +11,7 @@ const Usuario = ({ name, email, password, idusuario }) => {
 
   const eliminarUsuario = () => {
     axios
-      .post("http://localhost:3000/api/usuario/eliminar", {
+      .post("https://users-app-two.vercel.app/api/usuario/eliminar", {
         idusuario: idusuario,
       })
       .then((res) => {

@@ -37,7 +37,7 @@ const AgregarUsuario = () => {
       console.log(usuario);
       //Envio de datos al servidor
       axios
-        .post("http://localhost:3000/api/usuario/agregar", usuario)
+        .post("https://users-app-two.vercel.app/api/usuario/agregar", usuario)
         .then((res) => {
           console.log(res);
           setSubmit(false);

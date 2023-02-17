@@ -7,7 +7,7 @@ const ListaUsuarios = () => {
 
   //solicitud al servidor
   useEffect(() => {
-    axios.get('http://localhost:3000/api/usuario/lista')
+    axios.get('https://users-app-two.vercel.app/api/usuario/lista')
       .then(res => {
         console.log(res.data)
         setUsuarios(res.data)

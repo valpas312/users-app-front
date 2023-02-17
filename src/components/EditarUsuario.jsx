@@ -16,7 +16,7 @@ const EditarUsuario = () => {
 
   useEffect(() => {
     axios
-      .post("http://localhost:3000/api/usuario/editar", {
+      .post("https://users-app-two.vercel.app/api/usuario/editar", {
         idusuario: params.id,
       })
       .then((res) => {
@@ -59,7 +59,7 @@ const EditarUsuario = () => {
       console.log(usuario);
       //Envio de datos al servidor
       axios
-        .post("http://localhost:3000/api/usuario/actualizar", usuario)
+        .post("https://users-app-two.vercel.app/api/usuario/actualizar", usuario)
         .then((res) => {
           console.log(res);
           setSubmit(false);
