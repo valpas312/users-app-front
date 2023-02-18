@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Usuario from './Usuario'
 import axios from 'axios'
+import './listaUsuarios.css'
 
 const ListaUsuarios = () => {
   const [usuarios, setUsuarios] = useState([])
@@ -16,8 +17,9 @@ const ListaUsuarios = () => {
         console.log(err)
       })
   }, [])
-  return (<>
+  return (< >
     <div>ListaUsuarios</div>
+    <div className='listaContainer'>
     {
       //mapeado condicional de usuarios
 
@@ -25,6 +27,7 @@ const ListaUsuarios = () => {
       <Usuario key={usuario._id} {...usuario} />
       )) : (<div>No hay usuarios</div>)
     }
+    </div>
   </>
   )
 }
